@@ -22,9 +22,7 @@
             <i class="fas fa-bell"></i>
             <span class="notification-dot"></span>
           </button>
-          <button class="icon-btn">
-            <i class="fas fa-user"></i>
-          </button>
+          <button class="icon-btn"><i class="fas fa-user"></i></button>
         </div>
       </div>
 
@@ -32,51 +30,61 @@
         <div class="title-section">
           <div class="greeting" id="greeting"></div>
           <h1>
-            You've got <span class="task-count" id="task-count">0</span>
+            You've got <span class="task-count" id="taskCount">0</span> task
             today
             <button class="add-btn" onclick="openModal()">
-              <i class="fas fa-plus"></i>
-              Add New
+              <i class="fas fa-plus"></i> Add New
             </button>
           </h1>
         </div>
 
         <div class="section">
-          <div class="section-header">
-            <h2>On Hold</h2>
-          </div>
+          <div class="section-header"><h2>On Hold</h2></div>
           <div id="onHoldTasks"></div>
         </div>
-      </div>
 
-      <div class="section">
-        <div class="section-header">
-          <h2>Completed</h2>
-          <span class="badge badge-inactive">Inactive</span>
-        </div>
-        <div id="completedTasks"></div>
-      </div>
-    </div>
-
-    <div class="sidebar">
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Results Summary</h3>
-        <div class="stat-card">
-          <div class="stat-label">Completion Rate</div>
-          <div class="stat-value" id="completedRateValue">0%</div>
-          <div class="progress-bar">
-            <div
-              class="progress-fill"
-              id="completionProgress"
-              style="width: 0%"
-            ></div>
+        <div class="section">
+          <div class="section-header">
+            <h2>Completed</h2>
+            <span class="badge badge-inactive">Inactive</span>
           </div>
+          <div id="completedTasks"></div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Total Tasks</div>
-          <div class="stat-value" id="totalTasks">0</div>
-          <div class="progress-bar"></div>
-          <div class="progress-fill" id="totalProgress" style="width: 0%"></div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Results Summary</h3>
+          <div class="stat-card">
+            <div class="stat-label">Completion Rate</div>
+            <div class="stat-value" id="completionRateValue">0%</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="completionProgress"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Tasks</div>
+            <div class="stat-value" id="totalTasks">0</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="totalProgress"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Completed</div>
+            <div class="stat-value" id="completedCount">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Pending</div>
+            <div class="stat-value" id="pendingCount">0</div>
+          </div>
         </div>
       </div>
     </div>
