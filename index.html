@@ -12,26 +12,37 @@
   </head>
   <body>
     <div class="container">
-        <div class="header">
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search for any training you want">
-            </div>
-            <div class="header-icons">
-                <button class="icon-btn">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-dot"></span>
-                </button>
-                <button class="icon-btn">
-                    <i class="fas fa-user"></i>
-                </button>
-            </div>
+      <div class="header">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search for any training you want" />
         </div>
+        <div class="header-icons">
+          <button class="icon-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          <button class="icon-btn">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="title-section">
+          <div class="greeting" id="greeting"></div>
+          <h1>
+            You've got <span class="task-count" id="task-count">0</span>
+            today
+            <button class="add-btn" onclick="openModal()">
+              <i class="fas fa-plus"></i>
+              Add New
+            </button>
+          </h1>
+        </div>
+      </div>
     </div>
 
-
-
     <script src="script.js"></script>
-    
   </body>
 </html>
