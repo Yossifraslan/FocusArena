@@ -33,3 +33,40 @@ body {
   grid-template-columns: 1fr 350px;
   gap: 30px;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    grid-column: 1/-1;
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+.search input {
+    width: 100%;
+    padding: 12px 45px;
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search input:focus {
+  border-color: #8b5cf6;
+}
+
+.search-bar i { 
+  position: absolute;
+  left: 15px;
+  top: 50px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
