@@ -177,3 +177,43 @@ body {
   color: #dc2626;
 }
 
+.task-item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.task-item:hover{
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ec4899;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-checkbox.completed {
+  background: #ec4899;
+  position: relative;
+}
+
+.task-checkbox.completed::after {
+  content: "✓";
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
