@@ -68,6 +68,7 @@ body {
   top: 50px;
   transform: translateY(-50%);
   color: #9ca3af;
+  top: 50%;
 }
 
 .header-icons {
@@ -146,3 +147,21 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
