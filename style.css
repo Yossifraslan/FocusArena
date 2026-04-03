@@ -292,3 +292,20 @@ body {
   font-size: 12px;
   font-weight: 600;
 }
+
+.sidebar {
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.sidebar-section {
+  margin-bottom: 25px;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
