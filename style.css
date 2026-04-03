@@ -259,3 +259,23 @@ body {
   background: #fee2e2;
   color: #ef4444;
 }
+
+.priority-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority-critical {
+  color: #dc2626;
+}
+
+.priority-normal {
+  color: #f59e0b;
+}
+
+.priority-minor {
+  color: #10b981;
+}
