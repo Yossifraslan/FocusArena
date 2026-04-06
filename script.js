@@ -1,68 +1,66 @@
 let tasks = [],
-    editingId = null;
+  editingId = null;
 
 function loadData() {
-    const saved = localStorage.getItem("flowtasks");
-    if (saved) tasks = JSON.parse(saved);
-    else
-        tasks = [
-    {
+  const saved = localStorage.getItem("flowtasks");
+  if (saved) tasks = JSON.parse(saved);
+  else
+    tasks = [
+      {
         id: 1,
         title: "Evaluate the addition and deletion of user IDs",
         status: "pending",
         priority: "minor",
         completed: false,
-    },
-    {
+      },
+      {
         id: 2,
         title: "Identify the implementation team",
         status: "progress",
         priority: "minor",
-        completed: false, 
-    },
-    {
+        completed: false,
+      },
+      {
         id: 3,
         title: "Monitor system performance and adjust hardware",
         status: "pending",
         priority: "minor",
         completed: false,
-    },
-    {
+      },
+      {
         id: 4,
         title: "Batch schedule download/process",
         status: "pending",
         priority: "critical",
         completed: false,
-    },
- ];
- updateGreeting();
- renderTasks();
+      },
+    ];
+  updateGreeting();
+  renderTasks();
 }
 
-    function updateGreeting() {
-    const hour = new Date().getHours();
-    let greet = "Good Morning";
-    if (hour >= 12 && hour < 18) greet = "Good Afternoon";
-    else if (hour >= 18) greet = "Good Evening";
-    document.getElementById(
-        "greeting"
-    ).textContent = `${greet}, Codynn`;
+function updateGreeting() {
+  const hour = new Date().getHours();
+  let greet = "Good Morning";
+  if (hour >= 12 && hour < 18) greet = "Good Afternoon";
+  else if (hour >= 18) greet = "Good Evening";
+  document.getElementById("greeting").textContent = `${greet}, Codynn`;
 }
 
-    function saveDate() {
-        localStorage.setItem("codynnflowTasks", JSON.stringify(tasks));
-    }
+function saveDate() {
+  localStorage.setItem("codynnflowTasks", JSON.stringify(tasks));
+}
 
-    function renderTasks() {
-        const onHold = tasks.filter((t) => !t.completed);
-        const completed = tasks.filter((t) => !t.completed);
-    }
+function renderTasks() {
+  const onHold = tasks.filter((t) => !t.completed);
+  const completed = tasks.filter((t) => !t.completed);
+}
 
-    // Render On Hold Tasks
-        document.getElementById("onHoldTasks").innerHTML = onHold.length
-            ? onHold
-                .map(
-                (t) => `
+// Render On Hold Tasks
+document.getElementById("onHoldTasks").innerHTML = onHold.length
+  ? onHold
+      .map(
+        (t) => `
             <div class="task-item">
                 <div class="task-checkbox ${t.completed ? "completed" : ""}" onclick="toggleTask(${t.id})"></div>
                 <div class="task-content">
@@ -82,7 +80,7 @@ function loadData() {
                     <i class="fas fa-trash" style="font-size:12px;"></i>
                 </button>
             </div>
-        `
-                )
-                .join("")
-            : '<p style="color:#9ca3af;padding:20px;">No tasks on hold</p>';
+        `,
+      )
+      .join("")
+  : '<p style="color:#9ca3af;padding:20px;">No tasks on hold</p>';
