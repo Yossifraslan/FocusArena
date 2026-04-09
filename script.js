@@ -129,3 +129,12 @@
 
         saveData();
         }
+
+function toggleTask(id) {
+  const t = tasks.find((t) => t.id === id);
+  if (t) {
+    t.completed = !t.completed;
+    t.status = t.completed ? "completed" : "pending";
+    renderTasks();
+  }
+}
