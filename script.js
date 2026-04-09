@@ -153,3 +153,27 @@ function closeModal() {
   document.getElementById("taskForm").reset();
   editingId = null;
 }
+
+document.getElementById("taskForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const title = document.getElementById("taskTitle").value;
+  const status = document.getElementById("taskStatus").value;
+  const priority = document.getElementById("taskPriority").value;
+  if (editingId) {
+    const t = tasks.find((t) => t.id === editingId);
+    t.title = title;
+    t.status = status;
+    t.priority = priority;
+    t.completed = status === "completed";
+  } else {
+    tasks.push({
+      id: Date.now(),
+      title,
+      status,
+      priority,
+      completed: status === "completed",
+    });
+  }
+  renderTasks();
+  closeModal();
+});
