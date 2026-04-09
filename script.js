@@ -138,3 +138,10 @@ function toggleTask(id) {
     renderTasks();
   }
 }
+
+function deleteTask(id) {
+  if (confirm("Are you sure you want to delete this task?")) {
+    tasks = tasks.filter((t) => t.id !== id);
+    renderTasks();
+  }
+}
