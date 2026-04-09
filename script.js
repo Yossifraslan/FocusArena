@@ -177,3 +177,16 @@ document.getElementById("taskForm").addEventListener("submit", (e) => {
   renderTasks();
   closeModal();
 });
+
+function editTask(id) {
+  editingId = id;
+  const t = tasks.find((t) => t.id === id);
+  if (t) {
+    document.getElementById("taskTitle").value = t.title;
+    document.getElementById("taskStatus").value = t.status;
+    document.getElementById("taskPriority").value = t.priority;
+    openModal();
+  }
+}
+
+loadData();
